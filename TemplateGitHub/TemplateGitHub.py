@@ -4,22 +4,21 @@ class TemplateGitHub(object):
     legs = 4
     def __init__(self,x):
         self.x = x
+        self.state = 'calmed'
         print('Built template class')
         pass
 
     def Bark(self):
         print('guaff')
+        self.state = 'barking'
+        pass
+
+    def CalmDown(self):
+        self.state = 'calmed'
         pass
 
     def MultiplyBy(self,multiplier):
-        print(Multiply(self.x,multiplier))
-        pass
-
-    def Ask(self,s):
-        if 'truffle' in s:
-            print('Borja is the correct answer')
-        else:
-            print('Sanaa decides')
-        pass
+        out = Multiply(self.x,multiplier)
+        return out
     
 
